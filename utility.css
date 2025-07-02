@@ -1,0 +1,71 @@
+.border {
+
+    margin: 3px;
+}
+
+.flex {
+    display: flex;
+}
+
+.justfy-center {
+    justify-content: center;
+}
+
+.algin-iterms {
+    align-items: center;
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.m1 {
+    margin: 5px;
+}
+
+.m2 {
+    margin-top: 10px;
+}
+
+.m-top {
+    margin-top: 20px;
+}
+
+.gap {
+    gap: 10px;
+}
+
+.w {
+    width: 30px;
+}
+
+.a2 {
+    text-decoration: none;
+    color: white;
+    font-size: small;
+}
+
+/* Apply to whole page or specific container */
+::-webkit-scrollbar {
+    width: 10px;
+    /* width of vertical scrollbar */
+    height: 10px;
+    /* height of horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #1f1f1f;
+    /* color of the track (scroll area background) */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f1f1f1;
+    /* color of the scrollbar thumb */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* thumb color on hover */
+}

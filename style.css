@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.navbar {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #000;
+}
+
+/* Left section */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.navbar-left img.logo {
+    height: 32px;
+}
+
+.navbar-left .icon-circle {
+    background-color: #1a1a1a;
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    border-radius: 50px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    width: 300px;
+}
+
+.search-bar img {
+    margin-right: 10px;
+    opacity: 0.7;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* Right section */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-right a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar-right .divider {
+    width: 1px;
+    height: 20px;
+    background-color: #444;
+}
+
+.navbar-right .login-btn {
+    background-color: white;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-right .install-icon {
+    height: 14px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.navbar-right>a:hover {
+    font-weight: bold;
+}
+
+.left {
+    display: block;
+    max-width: 25vw;
+    height: 100%;
+    padding: 10px;
+    background-color: #444;
+    border: #1f1f1f;
+    border-radius: 10px;
+}
+
+
+.container .left .playlist {
+    display: flex;
+    padding: 10px;
+    color: white;
+    justify-content: space-between;
+}
+
+.b1,
+.b2 {
+    justify-content: center;
+    /* text-align: center; */
+    margin: 8px 0px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    /* width: 22vw; */
+    background-color: #1f1f1f;
+}
+
+.b2 {
+    margin-top: 20px;
+}
+
+.button {
+    padding: 4px 16px;
+    color: black;
+    background-color: #ffff;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.button:hover {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.footer {
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.a {
+    font-size: small;
+    text-decoration: none;
+    color: #b3b3b3;
+}
+
+.right {
+    background-color: #444;
+    border: #1f1f1f;
+    border-radius: 10px;
+    padding: 10px;
+    width: 75vw;
+    position: relative;
+    /* min-height: 25vh; */
+}
+
+.header {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    /* padding: 20px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardContainer {
+    margin: 30px;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    max-height: 68vh;
+}
+
+.card {
+    width: 200px;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.button-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1db954;
+    /* Spotify green */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 189px;
+    right: 13px;
+    opacity: 0;
+    transition: all 0.7s ease-out;
+}
+
+.button-icon:hover {
+    background-color: #1ed760;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.card:hover {
+    background-color: black;
+}
+
+.card:hover .button-icon {
+    opacity: 1;
+    top: 149px;
+}
+
+
+.lyrics {
+    width: 25vw;
+}
+
+.playbar {
+    margin-left: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #ccc;
+    justify-content: space-between;
+    width: 75vw;
+}
+
+.info>img {
+    width: 85px;
+    object-fit: cover;
+    margin: 0 20px 0 20px;
+}
+
+#info {
+    color: #1a1a1a;
+    font-weight: 700;
+    font-style: oblique;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nextsong ul {
+    cursor: pointer;
+    list-style: none;
+    color: #1a1a1a;
+    font-weight: 700;
+    font-style: oblique;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.seekbar {
+    height: 2px;
+    width: 100%;
+    border: 3px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 14px;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 13px;
+    position: relative;
+    background-color: white;
+    bottom: 5px;
+    transition: left 0.5s;
+}

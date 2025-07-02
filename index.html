@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <!-- Left Section -->
+        <div class="navbar-left">
+            <img src="images/logo.svg" class="logo invert" alt="Spotify Logo">
+
+            <div class="icon-circle">
+                <img src="images/home.svg" class="invert w" alt="Home Icon">
+            </div>
+
+            <div class="search-bar">
+                <img src="images/search.svg" class="invert w" alt="Search">
+                <input type="text" placeholder="What do you want to play?">
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="navbar-right">
+            <a href="#">Premium</a>
+            <a href="#">Support</a>
+            <a href="#">Download</a>
+            <div class="divider"></div>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/109/109602.png" class="install-icon">Install
+                App</a>
+            <a href="#">Sign up</a>
+            <a href="#" class="login-btn button">Log in</a>
+        </div>
+    </div>
+
+    <div class="container flex">
+        <div class="left border m1 gap">
+            <div class=" playlist">
+                <span class="library flex">
+                    <img style="height: 35px;" src="images/playlist.svg" class="invert w" alt="playlist">
+                    <h3 style="padding: 5px;">Your Library</h3>
+                </span>
+                <div class="btn">
+                    <button aria-label="Create playlist or folder"
+                        style="background: none; border: none; cursor: pointer;">
+                        <svg class="invert" viewBox="0 0 16 16" width="24" height="24" fill="currentColor"
+                            aria-hidden="true" role="img">
+                            <path
+                                d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="b1 m-top">
+                    <h3>Create your first playlist</h3>
+                    <p class="m2">It's easy,we'll help you</p>
+                    <button class="m2 button" type="button">Create playlist</button>
+                </div>
+                <div class="b2">
+                    <h3>Create your first playlist</h3>
+                    <p class="m2">It's easy,we'll help you</p>
+                    <button class="m2 button" type="button">Create playlist</button>
+                </div>
+                <div class="footer">
+                    <div class="legallinks-">
+                        <a class="a" href="https://www.spotify.com/in-en/legal/">Legal</a>
+                        <a class="a" href="https://www.spotify.com/in-en/safetyandprivacy/">Safety & Privacy Center</a>
+                        <a class="a" href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a>
+                        <a class="a" href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a>
+                        <a class="a" href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a>
+                        <a class="a" href="https://www.spotify.com/in-en/accessibility/">Accessibility</a>
+                    </div>
+
+                    <a class="a2" href="https://www.spotify.com/legal/cookies-policy/" target="_blank" rel="noopener">
+                        Cookies
+                    </a>
+
+                    <div class="language-selector">
+                        <button class="button m-top"
+                            style="background-color: black; color: #ffff; border: 1px solid white;">
+                            <span class="icon">
+                                <!-- Language Globe Icon -->
+                                <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                                    <path
+                                        d="M8.152 16H8a8 8 0 1 1 .152 0m-.41-14.202c-.226.273-.463.713-.677 1.323-.369 1.055-.626 2.496-.687 4.129h3.547c-.06-1.633-.318-3.074-.687-4.129-.213-.61-.45-1.05-.676-1.323-.194-.235-.326-.285-.385-.296h-.044c-.055.007-.19.052-.391.296M4.877 7.25c.062-1.771.34-3.386.773-4.624q.148-.427.329-.806a6.51 6.51 0 0 0-4.436 5.43zm-3.334 1.5a6.51 6.51 0 0 0 4.436 5.43 8 8 0 0 1-.33-.806c-.433-1.238-.71-2.853-.772-4.624zm4.835 0c.061 1.633.318 3.074.687 4.129.214.61.451 1.05.677 1.323.202.244.336.29.391.297l.044-.001c.06-.01.19-.061.385-.296.226-.273.463-.713.676-1.323.37-1.055.626-2.496.687-4.129zm5.048 0c-.061 1.771-.339 3.386-.772 4.624q-.123.353-.268.674a6.5 6.5 0 0 0 4.071-5.298zm3.031-1.5a6.51 6.51 0 0 0-4.071-5.298q.145.322.268.674c.433 1.238.711 2.853.772 4.624z" />
+                                </svg>
+                            </span>
+                            English
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right border m1">
+            <div class="header ">
+                <p>Trending Songs</p>
+                <a href="#" class="a">Show all</a>
+            </div>
+            <div class="cardContainer flex">
+                <div class="card" style="position: relative;">
+                    <span class="button-icon">
+                        <span class="icon-wrapper" aria-hidden="true">
+                            <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606" />
+                            </svg>
+                        </span>
+                    </span>
+                    <img src="playlist/Shree Hanuman Chalisa.jpeg" alt="Shree Hanuman Chalisa">
+                    <h5>Shree Hanuman Chalisha</h5>
+                    <a href="#" class="a">Hariharan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- play -->
+    <div class="play flex border">
+        <div class="lyrics">
+
+        </div>
+        <div class="playbar flex">
+            <div class="info flex">
+                <img src="images/cover.jpg" alt="cover">
+                <div id="info">
+                    <p>singer name</p>
+                    <p>album/movie name</p>
+                    <p id="songName" style="margin-top: 22px;"></p>
+
+                </div>
+            </div>
+            <div class="nextsong">
+                <ul class="songname">
+                    <div></div>
+                </ul>
+                <a href="#" class="a" style="color: black;">Show all</a>
+            </div>
+            <div class="playhere">
+                <img src="images/prevsong.svg" alt="prevsong" class="invert button">
+                <img src="images/play.svg" alt="play" id="play" class="invert button">
+                <img src="images/nextsong.svg" alt="nextsong" class="invert button">
+                <div class="song">
+                    <img src="images/volume.svg" alt="volume" style="position: relative; top: 3px;">
+                    <input type="range" name="" id="" style="width: 60%;">
+                    <img src="images/mute.svg" alt="mute" style="position: relative; top: 3px; left:5px">
+                </div>
+                <div class="seekbar">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="musicplay.js"></script>
+</body>
+
+</html>
