@@ -14,6 +14,7 @@
     <div class="navbar">
         <!-- Left Section -->
         <div class="navbar-left">
+            <img src="/images/hamburger.svg" alt="hamburger" class="hamburger invert">
             <img src="images/logo.svg" class="logo invert" alt="Spotify Logo">
 
             <div class="icon-circle">
@@ -100,7 +101,6 @@
         </div>
         <div class="right border m1">
             <div class="header ">
-                <p>Trending Songs</p>
                 <a href="#" class="a">Show all</a>
             </div>
             <div class="cardContainer flex">
@@ -123,7 +123,6 @@
     <!-- play -->
     <div class="play flex border">
         <div class="lyrics">
-
         </div>
         <div class="playbar flex">
             <div class="info flex">
@@ -131,27 +130,23 @@
                 <div id="info">
                     <p>singer name</p>
                     <p>album/movie name</p>
-                    <p id="songName" style="margin-top: 22px;"></p>
-
+                    <p class="songtime m-top"></p>
                 </div>
             </div>
+
             <div class="nextsong">
                 <ul class="songname">
-                    <div></div>
                 </ul>
-                <a href="#" class="a" style="color: black;">Show all</a>
+                <a id="showall" class="a" style="color: black;">Show all</a>
             </div>
             <div class="playhere">
-                <img src="images/prevsong.svg" alt="prevsong" class="invert button">
+                <img src="images/prevsong.svg" alt="prevsong" id="previous" class="invert button">
                 <img src="images/play.svg" alt="play" id="play" class="invert button">
-                <img src="images/nextsong.svg" alt="nextsong" class="invert button">
+                <img src="images/nextsong.svg" alt="nextsong" id="next" class="invert button">
                 <div class="song">
                     <img src="images/volume.svg" alt="volume" style="position: relative; top: 3px;">
                     <input type="range" name="" id="" style="width: 60%;">
                     <img src="images/mute.svg" alt="mute" style="position: relative; top: 3px; left:5px">
-                </div>
-                <div class="seekbar">
-                    <div class="circle"></div>
                 </div>
             </div>
         </div>
