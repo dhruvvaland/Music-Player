@@ -132,7 +132,8 @@ async function main() {
     document.getElementById("next").addEventListener("click", () => {
         let index = songs.indexOf(audio.src.split('/').slice(-1)[0])
         console.log(songs, index)
-        // Call function playmusic with new index
+        
+        if (index === songs.length - 1) return selectSong(0);
         selectSong(index + 1);
     })
 
