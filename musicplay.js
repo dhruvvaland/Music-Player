@@ -1,8 +1,8 @@
-let audio = new Audio(`./songs/Khoobsurat .mp3`);
+let audio = new Audio(`./songs/128-Satranga - Animal 128 Kbps.mp3`);
 let currentSongIndex;
-let songs;
+let songs = [];
 async function getSongs() {
-    let a = await fetch("http://127.0.0.1:3000/songs/");
+    let a = await fetch("/songs/");
     let response = await a.text();
     // console.log(response)
 
@@ -10,7 +10,6 @@ async function getSongs() {
     div.innerHTML = response
     let as = div.getElementsByTagName("a")
 
-    let songs = []
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
         console.log("elemetn", element);
@@ -27,20 +26,22 @@ async function getSongs() {
     return songs
 }
 
-function playSong(songIndex) {
-    if (currentSongIndex !== songIndex) {
-        audio.pause();
-        audio.removeEventListener('timeupdate', secondsToMinutesSeconds);
-        audio = new Audio(`./songs/${songs[songIndex]}`);
-        audio.addEventListener('timeupdate', secondsToMinutesSeconds);
-    };
+function selectSong(songIndex) {
+    audio.pause();
+    audio.removeEventListener('timeupdate', secondsToMinutesSeconds);
+    audio = new Audio(`./songs/${songs[songIndex]}`);
+    audio.addEventListener('timeupdate', secondsToMinutesSeconds);
     secondsToMinutesSeconds();
 
     console.log("Song array: ", songIndex);
     console.log("Audio", audio);
+    currentSongIndex = songIndex;
+    toogleSong();
+}
+
+function toogleSong() {
     if (audio.paused) {
         audio.play();
-        currentSongIndex = songIndex;
         play.src = "/images/pause.svg";
     }
     else {
@@ -51,12 +52,8 @@ function playSong(songIndex) {
 
 
 function secondsToMinutesSeconds() {
-    console.log("Calling this function");
-
     const seconds = audio.currentTime;
     const duration = audio.duration;
-
-    console.log("seconds ", seconds, " duration: ", duration);
 
     if (isNaN(seconds) || isNaN(duration)) {
         document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
@@ -81,7 +78,7 @@ audio.addEventListener("timeupdate", secondsToMinutesSeconds);
 
 async function main() {
     let count = 0;
-    songs = await getSongs()
+    songs = await getSongs();
     console.log(songs)
 
     let songUl = document.querySelector(".nextsong").getElementsByTagName("ul")[0];
@@ -130,20 +127,22 @@ async function main() {
 
     })
 
-    play.addEventListener("click", () => { playSong(0) });
+    play.addEventListener("click", toogleSong);
 
     document.getElementById("next").addEventListener("click", () => {
         let index = songs.indexOf(audio.src.split('/').slice(-1)[0])
         console.log(songs, index)
-        // Call function playmusic with new index
-        playSong(index + 1);
+        
+        if (index === songs.length - 1) return selectSong(0);
+        selectSong(index + 1);
     })
 
 
     document.getElementById("previous").addEventListener("click", () => {
         let index = songs.indexOf(audio.src.split('/').slice(-1)[0])
         console.log(songs, index)
-        playSong(index - 1);
+        if (index === 0) return selectSong(0);
+        selectSong(index - 1);
     })
 
     document.getElementById("showall").addEventListener("click", () => {
