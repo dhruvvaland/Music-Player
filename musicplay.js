@@ -2,7 +2,7 @@ let audio = new Audio(`./songs/Khoobsurat .mp3`);
 let currentSongIndex;
 let songs;
 async function getSongs() {
-    let a = await fetch("http://127.0.0.1:3000/songs/");
+    let a = await fetch("/songs/");
     let response = await a.text();
     // console.log(response)
 
